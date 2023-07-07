@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: Login Page feature validation
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 12.031 s <<< FAILURE! - in Login Page feature validation
+Login Page feature validation.TC01_LoginPage forgot password Link check  Time elapsed: 5.262 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Login - My Store]> but was:<[Account Suspended]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.stepdefinations.LoginSteps.userOnLoginPage(LoginSteps.java:33)
+	at ✽.User is on Login Page "Login - My Store"(file:///C:/Users/ASUS/AutomationWorkSpace/CucumberBDDFramework/src/test/resources/com/featrues/LoginPage.feature:5)
+
+Login Page feature validation.TC02_LoginPage Create an Account section check  Time elapsed: 3.393 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Login - My Store]> but was:<[Account Suspended]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.stepdefinations.LoginSteps.userOnLoginPage(LoginSteps.java:33)
+	at ✽.User is on Login Page "Login - My Store"(file:///C:/Users/ASUS/AutomationWorkSpace/CucumberBDDFramework/src/test/resources/com/featrues/LoginPage.feature:9)
+
+Login Page feature validation.TC03_Login with correct credential and check landing page is My Account  Time elapsed: 3.375 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Login - My Store]> but was:<[Account Suspended]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.stepdefinations.LoginSteps.userOnLoginPage(LoginSteps.java:33)
+	at ✽.User is on Login Page "Login - My Store"(file:///C:/Users/ASUS/AutomationWorkSpace/CucumberBDDFramework/src/test/resources/com/featrues/LoginPage.feature:15)
+
