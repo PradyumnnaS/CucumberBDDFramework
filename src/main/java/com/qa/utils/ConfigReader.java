@@ -19,27 +19,26 @@ public class ConfigReader {
 	 */
 	public Properties init_prop(){
 		prop = new Properties();
-		
+		log.info("OS detected as :"+os);
 		FileInputStream ip = null;
 		try {
 			if(os.indexOf("win")>=0) {
-				log.info("OS detected as :"+os);
 				ip = new FileInputStream("src\\test\\resources\\config\\config.properties");	
 			}
 			
 			if(os.indexOf("ubu")>=0) {
-				log.info("OS detected as :"+os);
 				ip = new FileInputStream("src/test/resources/config/config.properties");
 			}
 			
 			prop.load(ip);
 			log.info("config.properties file loaded");
 		} catch (FileNotFoundException e1) {
+			e1.getMessage();
 			e1.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+			e.getMessage();
 		}
-		
 		return prop;
 	}
 }
