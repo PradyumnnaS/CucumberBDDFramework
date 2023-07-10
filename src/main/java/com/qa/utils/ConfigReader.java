@@ -26,7 +26,7 @@ public class ConfigReader {
 				ip = new FileInputStream("src\\test\\resources\\config\\config.properties");	
 			}
 			
-			if(os.indexOf("ubu")>=0) {
+			if(os.indexOf("linux")>=0) {
 				ip = new FileInputStream("src/test/resources/config/config.properties");
 			}
 			
