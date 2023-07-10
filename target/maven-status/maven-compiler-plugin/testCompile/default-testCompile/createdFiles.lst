@@ -1,3 +1,2 @@
 com\stepdefinations\LoginSteps.class
 com\apphooks\ApplicationHooks.class
-com\runner\MyTestRunner.class

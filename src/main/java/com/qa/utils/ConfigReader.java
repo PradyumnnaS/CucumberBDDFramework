@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 public class ConfigReader {
 	
 	private Properties prop;
+	private static String os = System.getProperty("os.name").toLowerCase();
 	private static final Logger log = LogManager.getLogger(ConfigReader.class);
 	/**
 	 * init_prop() : Used for load properties from config.properties file 
@@ -19,9 +20,18 @@ public class ConfigReader {
 	public Properties init_prop(){
 		prop = new Properties();
 		
-		FileInputStream ip;
+		FileInputStream ip = null;
 		try {
-			ip = new FileInputStream("src\\test\\resources\\config\\config.properties");
+			if(os.indexOf("win")>=0) {
+				log.info("OS detected as :"+os);
+				ip = new FileInputStream("src\\test\\resources\\config\\config.properties");	
+			}
+			
+			if(os.indexOf("ubu")>=0) {
+				log.info("OS detected as :"+os);
+				ip = new FileInputStream("src/test/resources/config/config.properties");
+			}
+			
 			prop.load(ip);
 			log.info("config.properties file loaded");
 		} catch (FileNotFoundException e1) {
