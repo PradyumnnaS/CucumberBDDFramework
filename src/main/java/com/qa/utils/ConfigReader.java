@@ -29,7 +29,6 @@ public class ConfigReader {
 			if(os.indexOf("linux")>=0) {
 				ip = new FileInputStream("src/test/resources/config/config.properties");
 			}
-			
 			prop.load(ip);
 			log.info("config.properties file loaded");
 		} catch (FileNotFoundException e1) {
