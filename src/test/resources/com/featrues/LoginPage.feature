@@ -1,11 +1,7 @@
 @LoginPage
-Feature: Login Page feature validation
+Feature: Login Page Validation
 
-	Background:
-		Given User is in Login Page of Cogmento CRM
-
-  Scenario: TC01_User login to Cogmento CRM
-    When User enter user Email
-    And User enter user Passowrd
-    Then User click on login button
+	@LoginPage_TC01
+  Scenario: TC01_Validate User successfully login into Cogmento CRM
+    When User login to Cogmento CRM application
     Then Validate the title of the page is "Cogmento CRM"

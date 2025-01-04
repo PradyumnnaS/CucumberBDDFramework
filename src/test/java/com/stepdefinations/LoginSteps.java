@@ -22,33 +22,25 @@ public class LoginSteps {
 	private Properties prop = configReader.init_prop();
 	
 	private static final Logger log = LogManager.getLogger(LoginSteps.class);
-	
-	@Given("^User is in Login Page of Cogmento CRM$")
-	public void userOpenCogmentoCrm() {
+
+	@When("^User login to Cogmento CRM application$")
+	public void userEnteUserEmail() {
+		
 		String appurl = prop.getProperty("login_url");
 		log.info("Application Url is: "+appurl);
 		loginPage.userOpenCogmentoCrm(appurl);
 		
-	}
-
-	@When("^User enter user Email$")
-	public void userEnteUserEmail() {
-			String useremail = prop.getProperty("userEmail");
-			log.info("User enter Email as :"+useremail);
-			loginPage.userEnterEmail(useremail);
-	}
-
-	@When("^User enter user Passowrd$")
-	public void userEnterUserPassowrd() {
+		String useremail = prop.getProperty("userEmail");
+		log.info("User enter Email as :"+useremail);
+		loginPage.userEnterEmail(useremail);
+		
 		String userpassword = prop.getProperty("userPassword");
 		log.info("User enter password as :"+userpassword);
 		loginPage.userEnterPassword(userpassword);	
-	}
-
-	@Then("^User click on login button$")
-	public void userClickLoginButton() {
+		
 		log.info("User clicked on Login button");
 	    loginPage.userClickLogin();
+		
 	}
 
 	@Then("^Validate the title of the page is \"(.*)\"$")

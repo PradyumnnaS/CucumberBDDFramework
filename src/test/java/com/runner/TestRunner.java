@@ -11,6 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = {"com.stepdefinations","com.apphooks"},
 		plugin= {"pretty","html:target/CucumberReport.html"},
 	    monochrome = true
+	    //tags="@LoginPage"
 	    //dryRun= true
 		)
 public class TestRunner {

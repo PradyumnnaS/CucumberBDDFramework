@@ -12,7 +12,7 @@ public class LoginPage {
 	private WebDriver driver;
 	private static final Logger log = LogManager.getLogger(LoginPage.class);
 	
-	// BY Locator
+	// LoginPage Locators
 	By userEmailBox = By.xpath("//input[@name='email']");
 	By userPasswordBox = By.xpath("//input[@name='password']");
 	By userLoginBtn = By.xpath("//div[contains(text(),'Login')]");
@@ -27,7 +27,7 @@ public class LoginPage {
 	}
 	
 	public void userEnterEmail(String email) {
-			driver.findElement(userEmailBox).sendKeys(email);
+		driver.findElement(userEmailBox).sendKeys(email);
 		
 	}
 	
